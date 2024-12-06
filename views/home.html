@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Rede Social</title>
+    <link rel="stylesheet" href="../css/rooms.css">
+</head>
+<body>
+    <header>
+        <h1>SwiftChat</h1>
+        <p>Escolha uma sala para conversar ou crie uma nova.</p>
+    </header>
+
+    <section>
+        <h2>Salas disponíveis</h2>
+        <div id="roomsList">
+            <!-- As salas serão listadas aqui -->
+        </div>
+    </section>
+
+    <!-- Botão para abrir o modal de criação de sala -->
+    <button id="createRoomButton">+</button>
+
+    <!-- Modal de criação de sala -->
+    <div id="createRoomModal" class="hidden">
+        <section>
+            <h2>Criar nova sala</h2>
+            <form id="createRoomForm">
+                <label for="roomName">Nome da sala:</label>
+                <input type="text" id="roomName" placeholder="Digite o nome da sala" required>
+                <br>
+                <label for="roomDescription">Descrição (opcional):</label>
+                <textarea id="roomDescription" placeholder="Descrição da sala (opcional)"></textarea>
+                <br>
+                <button type="submit">Criar Sala</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/parse@3.0.0/dist/parse.min.js"></script>
+    <script src="../config/back4app_config.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

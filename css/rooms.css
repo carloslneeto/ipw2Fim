@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #414042; 
+    color: #ffffff; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffd700; 
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #ffd700; 
+    margin-bottom: 10px;
+}
+
+#roomsList {
+    background-color: #ffffff; 
+    color: #333; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#createRoomButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700; 
+    color: #333;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#createRoomButton:hover {
+    background-color: #f0c000; 
+}
+
+
+#createRoomModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; 
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+}
+
+#createRoomModal.hidden {
+    display: none;
+}
+
+
+form label {
+    color: #ffd700; 
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+form button {
+    background-color: #ffd700; 
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #f0c000;
+}
+/* Mantém a base existente */
+
+/* Define o layout principal */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça a área de mensagens e o formulário */
+    flex-grow: 1;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* Contêiner de mensagens */
+#messagesContainer {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto; /* Adiciona rolagem para mensagens */
+    background-color: #525252;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+/* Cada mensagem (exemplo, pode ser ajustado no JavaScript) */
+.message {
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word; /* Ajusta palavras longas */
+}
+
+/* Formulário de envio de mensagens */
+#sendMessageForm {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    border-top: 1px solid #525252;
+}
+
+/* Área de texto */
+#sendMessageForm textarea {
+    flex-grow: 1;
+    resize: none;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Botão de envio */
+#sendMessageForm button {
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#sendMessageForm button:hover {
+    background-color: #f0c000;
+}
+
+#backButton {
+    position: absolute;
+    top: 15px; 
+    left: 15px; 
+    font-size: 1.8rem;
+    text-decoration: none; 
+    color: #ffd700; 
+    background: none; 
+    border: none;
+    cursor: pointer; 
+    transition: color 0.3s ease-in-out; 
+}
+
+#backButton:hover {
+    color: #f0c000; 
+}
+
+#roomsList {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#roomsList > div {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-bottom: 1px solid #333;
+}
+
+#roomsList > div:last-child {
+    border-bottom: none; 
+}

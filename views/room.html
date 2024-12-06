@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="../css/rooms.css">
+</head>
+<body>
+  <header>
+    <h1 id="roomName">Room Name</h1>
+    <a href="home.html" id="backButton" title="Voltar à Home">&#8592;</a>
+  </header>
+  <main>
+    <section id="messagesContainer">
+    </section>
+    <form id="sendMessageForm">
+      <textarea id="messageContent" placeholder="Digite sua mensagem..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/parse@3.0.0/dist/parse.min.js"></script>
+  <script src="../config/back4app_config.js"></script>
+  <script src="../js/message.js"></script>
+</body>
+</html>
