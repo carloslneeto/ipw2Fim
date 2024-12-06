@@ -298,12 +298,25 @@ footer {
     display: block;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
+    margin: 0; /* Remove margens para evitar deslocamentos */
+}
+
+main {
+    flex: 1; /* O main se expande para ocupar o espaço disponível */
+}
+
 footer {
-    background-color: #f1f1f1;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #333;
-    border-top: 1px solid #ccc;
+    padding: 15px 0;
     width: 100%;
-  }
+    position: fixed; /* Torna o rodapé fixo na parte inferior */
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
